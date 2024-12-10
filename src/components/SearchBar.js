@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import SearchBar from '../components/SearchBar';
 
 /* import Constants from 'expo-constants';
 
@@ -12,11 +11,10 @@ const CLIENT_ID = extra.CLIENT_ID || 'default_client_id';
 console.log('API_KEY:', API_KEY);
 console.log('CLIENT_ID:', CLIENT_ID); */
 
-const SearchScreen = () => {
+const SearchBar = () => {
   return (
     <View>
-      <SearchBar />
-      <Text>SearchScreen</Text>
+      <Text>SearchBar</Text>
     </View>
   );
 };
@@ -30,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SearchScreen;
+export default SearchBar;

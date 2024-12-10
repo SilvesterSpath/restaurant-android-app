@@ -12,6 +12,7 @@ const navigator = createStackNavigator(
     initialRouteName: 'Search',
     defaultNavigationOptions: {
       title: 'Business Search',
+      headerTitleAlign: 'center',
     },
   }
 );
@@ -27,12 +28,3 @@ const navigator = createStackNavigator(
 } */
 
 export default createAppContainer(navigator);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

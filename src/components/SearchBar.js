@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { View, TextInput, StyleSheet } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
@@ -7,6 +8,9 @@ const SearchBar = ({ term, onTermChange }) => {
     <View style={styles.backgroundStyle}>
       <AntDesign name='search1' color='black' style={styles.icon} />
       <TextInput
+        spellCheck={Platform.OS === 'android'}
+        autoCorrect={true}
+        autoCapitalize='none'
         placeholder='Search'
         style={styles.input}
         value={term}

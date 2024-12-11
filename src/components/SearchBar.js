@@ -2,11 +2,16 @@ import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const SearchBar = () => {
+const SearchBar = ({ term, onTermChange }) => {
   return (
     <View style={styles.backgroundStyle}>
       <AntDesign name='search1' color='black' style={styles.icon} />
-      <TextInput placeholder='Search' style={styles.input} />
+      <TextInput
+        placeholder='Search'
+        style={styles.input}
+        value={term}
+        onChangeText={(newTerm) => onTermChange(newTerm)}
+      />
     </View>
   );
 };

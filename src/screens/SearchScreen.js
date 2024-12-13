@@ -24,7 +24,7 @@ const SearchScreen = () => {
         params: {
           limit: 20,
           term,
-          location: 'new york',
+          location: 'boston',
         },
       });
       setResults(response.data.businesses);
@@ -47,16 +47,25 @@ const SearchScreen = () => {
 
   return (
     <View>
-      <SearchBar
-        term={term}
-        onTermChange={(newTerm) => setTerm(newTerm)}
-        onTermSubmit={() => console.log('Term was submitted')}
-      />
+      <SearchBar term={term} onTermChange={setTerm} onTermSubmit={seachApi} />
       <Text>SearchScreen</Text>
       {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>
       {results.map((result) => {
-        return <Text key={result.id}>{result.name}</Text>;
+        return (
+          <View key={result.id}>
+            <Text>{result.name}</Text>
+            <Text>{result.rating} Stars</Text>
+            <Text>{result.review_count} Reviews</Text>
+            <Text>{result.price}</Text>
+            <Text>{result.location.address1}</Text>
+            <Text>{result.location.city}</Text>
+            <Text>{result.location.state}</Text>
+            <Text>{result.location.zip_code}</Text>
+            <Text>{result.location.country}</Text>
+            <Text>{result.location.display_address}</Text>
+          </View>
+        );
       })}
     </View>
   );

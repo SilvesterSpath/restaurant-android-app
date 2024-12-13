@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
+import yelp from '../api/yelp';
 
 /* import Constants from 'expo-constants';
 
@@ -14,6 +15,22 @@ console.log('CLIENT_ID:', CLIENT_ID); */
 
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
+  const [results, setResults] = useState([]);
+
+  const seachApi = async () => {
+    const response = await yelp.get('/search', {
+      params: {
+        limit: 20,
+        term,
+        location: 'new york',
+      },
+    });
+    setResults(response.data.businesses);
+  };
+
+  useEffect(() => {
+    seachApi();
+  }, []);
 
   return (
     <View>
@@ -23,7 +40,10 @@ const SearchScreen = () => {
         onTermSubmit={() => console.log('Term was submitted')}
       />
       <Text>SearchScreen</Text>
-      <Text>{term}</Text>
+      <Text>We have found {results.length} results</Text>
+      {results.map((result) => {
+        return <Text key={result.id}>{result.name}</Text>;
+      })}
     </View>
   );
 };

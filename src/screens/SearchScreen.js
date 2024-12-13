@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import yelp from '../api/yelp';
+import ResultsCard from '../components/ResutsCard';
 
 /* import Constants from 'expo-constants';
 
@@ -52,20 +53,7 @@ const SearchScreen = () => {
       {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>
       {results.map((result) => {
-        return (
-          <View key={result.id}>
-            <Text>{result.name}</Text>
-            <Text>{result.rating} Stars</Text>
-            <Text>{result.review_count} Reviews</Text>
-            <Text>{result.price}</Text>
-            <Text>{result.location.address1}</Text>
-            <Text>{result.location.city}</Text>
-            <Text>{result.location.state}</Text>
-            <Text>{result.location.zip_code}</Text>
-            <Text>{result.location.country}</Text>
-            <Text>{result.location.display_address}</Text>
-          </View>
-        );
+        return <ResultsCard key={result.id} result={result} />;
       })}
     </View>
   );

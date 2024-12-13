@@ -16,16 +16,29 @@ console.log('CLIENT_ID:', CLIENT_ID); */
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
   const [results, setResults] = useState([]);
+  const [error, setError] = useState('');
 
   const seachApi = async () => {
-    const response = await yelp.get('/search', {
-      params: {
-        limit: 20,
-        term,
-        location: 'new york',
-      },
-    });
-    setResults(response.data.businesses);
+    try {
+      const response = await yelp.get('/search', {
+        params: {
+          limit: 20,
+          term,
+          location: 'new york',
+        },
+      });
+      setResults(response.data.businesses);
+      setError('');
+    } catch (error) {
+      // Handle the error
+      console.error('Error fetching Yelp data:', error);
+
+      // Optional: Set an error state
+      setError('Could not fetch results. Please try again.');
+
+      // Optional: Set results to an empty array
+      setResults([]);
+    }
   };
 
   useEffect(() => {
@@ -40,6 +53,7 @@ const SearchScreen = () => {
         onTermSubmit={() => console.log('Term was submitted')}
       />
       <Text>SearchScreen</Text>
+      {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>
       {results.map((result) => {
         return <Text key={result.id}>{result.name}</Text>;

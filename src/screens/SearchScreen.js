@@ -15,7 +15,8 @@ console.log('API_KEY:', API_KEY);
 console.log('CLIENT_ID:', CLIENT_ID); */
 
 const SearchScreen = () => {
-  const [term, setTerm] = useState('');
+  const [term, setTerm] = useState('pizza');
+
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
 
@@ -48,8 +49,9 @@ const SearchScreen = () => {
 
   return (
     <View>
-      <SearchBar term={term} onTermChange={setTerm} onTermSubmit={seachApi} />
       <Text>SearchScreen</Text>
+      <SearchBar term={term} onTermChange={setTerm} onTermSubmit={seachApi} />
+
       {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>
       {results.map((result) => {

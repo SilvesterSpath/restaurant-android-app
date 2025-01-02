@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import { View, TextInput, StyleSheet } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const SearchBar = ({ term, onTermChange, onTermSubmit }) => {
+const SearchBar = ({ term, city, onTermChange, onTermSubmit }) => {
   return (
     <View style={styles.backgroundStyle}>
       <AntDesign name='search1' color='black' style={styles.icon} />

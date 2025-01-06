@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
-import yelp from '../api/yelp';
 import ResultsCard from '../components/ResutsCard';
 import useResults from '../hooks/useResults';
+import ResultsList from '../components/ResultsList';
 
 /* import Constants from 'expo-constants';
 
@@ -30,9 +30,12 @@ const SearchScreen = () => {
 
       {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>
-      {results.map((result) => {
+      {/*       {results.map((result) => {
         return <ResultsCard key={result.id} result={result} />;
-      })}
+      })} */}
+      <ResultsList results={results} />
+      <ResultsList results={results} />
+      <ResultsList results={results} />
     </View>
   );
 };

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import yelp from '../api/yelp';
 import ResultsCard from '../components/ResutsCard';
+import useResults from '../hooks/useResults';
 
 /* import Constants from 'expo-constants';
 
@@ -16,41 +17,7 @@ console.log('CLIENT_ID:', CLIENT_ID); */
 
 const SearchScreen = () => {
   const [term, setTerm] = useState('');
-
-  const [results, setResults] = useState([]);
-  const [error, setError] = useState('');
-
-  const searchApi = async (searchTerm) => {
-    console.log('Hi there!');
-    try {
-      const response = await yelp.get('/search', {
-        params: {
-          limit: 20,
-          term: searchTerm,
-          location: 'boston',
-        },
-      });
-      setResults(response.data.businesses);
-      setError('');
-    } catch (error) {
-      // Handle the error
-      console.error('Error fetching Yelp data:', error);
-
-      // Optional: Set an error state
-      setError('Could not fetch results. Please try again.');
-
-      // Optional: Set results to an empty array
-      setResults([]);
-    }
-  };
-
-  // Call searchApi when component mounts
-  // Bad code!
-  // searchApi('pasta');
-
-  useEffect(() => {
-    searchApi('pasta');
-  }, []);
+  const [results, error, searchApi] = useResults();
 
   return (
     <View>

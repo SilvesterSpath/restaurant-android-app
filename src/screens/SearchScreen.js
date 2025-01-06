@@ -15,17 +15,18 @@ console.log('API_KEY:', API_KEY);
 console.log('CLIENT_ID:', CLIENT_ID); */
 
 const SearchScreen = () => {
-  const [term, setTerm] = useState('pizza');
+  const [term, setTerm] = useState('');
 
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
 
-  const seachApi = async () => {
+  const searchApi = async (searchTerm) => {
+    console.log('Hi there!');
     try {
       const response = await yelp.get('/search', {
         params: {
           limit: 20,
-          term,
+          term: searchTerm,
           location: 'boston',
         },
       });
@@ -43,14 +44,22 @@ const SearchScreen = () => {
     }
   };
 
+  // Call searchApi when component mounts
+  // Bad code!
+  // searchApi('pasta');
+
   useEffect(() => {
-    seachApi();
+    searchApi('pasta');
   }, []);
 
   return (
     <View>
       <Text>SearchScreen</Text>
-      <SearchBar term={term} onTermChange={setTerm} onTermSubmit={seachApi} />
+      <SearchBar
+        term={term}
+        onTermChange={setTerm}
+        onTermSubmit={() => searchApi(term)}
+      />
 
       {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>

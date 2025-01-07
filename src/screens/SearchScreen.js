@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import ResultsCard from '../components/ResutsCard';
 import useResults from '../hooks/useResults';
@@ -37,12 +37,18 @@ const SearchScreen = () => {
 
       {error && <Text>{error}</Text>}
       <Text>We have found {results.length} results</Text>
-      {/*       {results.map((result) => {
-        return <ResultsCard key={result.id} result={result} />;
-      })} */}
-      <ResultsList results={filterResultsByPrice('$')} title='CostEffective' />
-      <ResultsList results={filterResultsByPrice('$$')} title='BitPricier' />
-      <ResultsList results={filterResultsByPrice('$$$')} title='BigSpender' />
+      <ScrollView>
+        <ResultsList
+          results={filterResultsByPrice('$')}
+          title='CostEffective'
+        />
+        <ResultsList results={filterResultsByPrice('$$')} title='BitPricier' />
+        <ResultsList results={filterResultsByPrice('$$$')} title='BigSpender' />
+        <ResultsList
+          results={filterResultsByPrice('$$$$')}
+          title='Extravagant'
+        />
+      </ScrollView>
     </View>
   );
 };

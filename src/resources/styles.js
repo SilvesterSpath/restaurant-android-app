@@ -53,6 +53,12 @@ const styles = StyleSheet.create({
     color: '#4CAF50',
     fontWeight: 'bold',
   },
+  image: {
+    width: '100%',
+    height: 150,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
 });
 
 export default styles;

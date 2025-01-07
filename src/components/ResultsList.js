@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 import ResutsCard from './ResutsCard';
 
 const ResultsList = ({ title, results }) => {
+  /*   console.log(JSON.stringify(results, null, 2)); */
   return (
     <View>
       <Text style={styles.title}>{title}</Text>
@@ -11,7 +12,15 @@ const ResultsList = ({ title, results }) => {
         results.map((item) => {
           return <ResutsCard result={item} key={item.id} />;
         })} */}
-      <Text>Results: {results.length}</Text>
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={results}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => {
+          return <ResutsCard result={item} />;
+        }}
+      />
     </View>
   );
 };

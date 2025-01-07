@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import styles from '../resources/styles';
 
 const ResultsCard = ({ result }) => {
   return (
     <View style={styles.cardContainer}>
+      <Image
+        source={{ uri: result.image_url }}
+        style={styles.image}
+        resizeMode='cover'
+      />
       <View style={styles.cardHeader}>
         <Text style={styles.restaurantName} numberOfLines={2}>
           {result.name}

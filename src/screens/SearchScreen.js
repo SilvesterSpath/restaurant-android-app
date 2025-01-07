@@ -19,6 +19,13 @@ const SearchScreen = () => {
   const [term, setTerm] = useState('');
   const [results, error, searchApi] = useResults();
 
+  const filterResultsByPrice = (price) => {
+    // price === '$' || '$$' || '$$$'
+    return results.filter((item) => {
+      return item.price === price;
+    });
+  };
+
   return (
     <View>
       <Text>SearchScreen</Text>
@@ -33,9 +40,9 @@ const SearchScreen = () => {
       {/*       {results.map((result) => {
         return <ResultsCard key={result.id} result={result} />;
       })} */}
-      <ResultsList results={results} />
-      <ResultsList results={results} />
-      <ResultsList results={results} />
+      <ResultsList results={filterResultsByPrice('$')} title='CostEffective' />
+      <ResultsList results={filterResultsByPrice('$$')} title='BitPricier' />
+      <ResultsList results={filterResultsByPrice('$$$')} title='BigSpender' />
     </View>
   );
 };

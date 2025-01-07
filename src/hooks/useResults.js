@@ -34,7 +34,7 @@ export default () => {
   // searchApi('pasta');
 
   useEffect(() => {
-    searchApi('pasta');
+    searchApi('burger');
   }, []);
 
   return [results, error, searchApi];

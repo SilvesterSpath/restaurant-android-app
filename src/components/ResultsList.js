@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import ResutsCard from './ResutsCard';
+import ResultsDetail from './ResultsDetail';
 
 const ResultsList = ({ title, results }) => {
   /*   console.log(JSON.stringify(results, null, 2)); */
@@ -18,7 +19,8 @@ const ResultsList = ({ title, results }) => {
         data={results}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
-          return <ResutsCard result={item} />;
+          /* return <ResutsCard result={item} />; */
+          return <ResultsDetail result={item} />;
         }}
       />
     </View>

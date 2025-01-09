@@ -7,7 +7,7 @@ import ResultsDetail from './ResultsDetail';
 const ResultsList = ({ title, results }) => {
   /*   console.log(JSON.stringify(results, null, 2)); */
   return (
-    <View>
+    <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
       {/*       {results &&
         results.map((item) => {
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginBottom: 10,
+    marginLeft: 10,
   },
 });
 

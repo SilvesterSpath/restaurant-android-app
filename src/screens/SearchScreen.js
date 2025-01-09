@@ -27,7 +27,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <Text>SearchScreen</Text>
       <SearchBar
         term={term}
@@ -36,7 +36,10 @@ const SearchScreen = () => {
       />
 
       {error && <Text>{error}</Text>}
-      <Text>We have found {results.length} results</Text>
+      <Text /* style={{ marginLeft: -180 }} */>
+        {' '}
+        We have found {results.length} results
+      </Text>
       <ScrollView>
         <ResultsList
           results={filterResultsByPrice('$')}
@@ -52,5 +55,7 @@ const SearchScreen = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default SearchScreen;

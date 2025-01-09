@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 const ResultsDetail = ({ result }) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image source={{ uri: result.image_url }} style={styles.image} />
       <Text style={styles.name}>{result.name}</Text>
       <Text>
@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: 'bold',
+  },
+  container: {
+    marginLeft: 10,
   },
 });
 

@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   icon: {
-    marginHorizontal: 15, // Add space around the icon
+    marginHorizontal: 10, // Add space around the icon
     fontSize: 35,
     alignSelf: 'center', // Vertically center the icon
   },

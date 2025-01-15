@@ -1,0 +1,94 @@
+[
+  {
+    "id": "yelp-business-1",
+    "name": "The Cozy Corner Cafe",
+    "image_url": "https://example.com/cozycorner.jpg",
+    "url": "https://example.com/cozycorner",
+    "rating": 4.5,
+    "review_count": 125,
+    "price": "$$",
+    "categories": [
+      { "alias": "cafes", "title": "Cafes" },
+      { "alias": "coffee", "title": "Coffee & Tea" }
+    ],
+    "coordinates": { "latitude": 34.0522, "longitude": -118.2437 },
+    "location": {
+      "address1": "123 Main St",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90001",
+      "country": "US"
+    },
+    "phone": "+12135551212",
+    "distance": 1609.34
+  },
+  {
+    "id": "yelp-business-2",
+    "name": "Pizza Paradise",
+    "image_url": "https://example.com/pizzaparadise.jpg",
+    "url": "https://example.com/pizzaparadise",
+    "rating": 4.0,
+    "review_count": 88,
+    "price": "$",
+    "categories": [
+      { "alias": "pizza", "title": "Pizza" },
+      { "alias": "restaurants", "title": "Restaurants" }
+    ],
+    "coordinates": { "latitude": 34.06, "longitude": -118.25 },
+    "location": {
+      "address1": "456 Elm Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90002",
+      "country": "US"
+    },
+    "phone": "+12135551213",
+    "distance": 2414.02
+  },
+  {
+    "id": "yelp-business-3",
+    "name": "Sushi Zen",
+    "image_url": "https://example.com/sushizen.jpg",
+    "url": "https://example.com/sushizen",
+    "rating": 4.8,
+    "review_count": 210,
+    "price": "$$$",
+    "categories": [
+      { "alias": "sushi", "title": "Sushi Bars" },
+      { "alias": "japanese", "title": "Japanese" }
+    ],
+    "coordinates": { "latitude": 34.045, "longitude": -118.235 },
+    "location": {
+      "address1": "789 Oak St",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90003",
+      "country": "US"
+    },
+    "phone": "+12135551214",
+    "distance": 804.67
+  },
+  {
+    "id": "yelp-business-4",
+    "name": "Burger Joint",
+    "image_url": "https://example.com/burgerjoint.jpg",
+    "url": "https://example.com/burgerjoint",
+    "rating": 3.9,
+    "review_count": 155,
+    "price": "$",
+    "categories": [
+      { "alias": "burgers", "title": "Burgers" },
+      { "alias": "fastfood", "title": "Fast Food" }
+    ],
+    "coordinates": { "latitude": 34.055, "longitude": -118.24 },
+    "location": {
+      "address1": "101 Pine Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90004",
+      "country": "US"
+    },
+    "phone": "+12135551215",
+    "distance": 1207.01
+  }
+]

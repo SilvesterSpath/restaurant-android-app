@@ -4,6 +4,7 @@ import SearchBar from '../components/SearchBar';
 import ResultsCard from '../components/ResutsCard';
 import useResults from '../hooks/useResults';
 import ResultsList from '../components/ResultsList';
+import data from '../api/data.json';
 
 /* import Constants from 'expo-constants';
 
@@ -21,7 +22,7 @@ const SearchScreen = () => {
 
   const filterResultsByPrice = (price) => {
     // price === '$' || '$$' || '$$$'
-    return results.filter((item) => {
+    return data.filter((item) => {
       return item.price === price;
     });
   };
@@ -38,7 +39,7 @@ const SearchScreen = () => {
       {error && <Text>{error}</Text>}
       <Text /* style={{ marginLeft: -180 }} */>
         {' '}
-        We have found {results.length} results
+        We have found {data.length} results
       </Text>
       <ScrollView>
         <ResultsList
@@ -56,6 +57,10 @@ const SearchScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    /* marginLeft: 15, */
+  },
+});
 
 export default SearchScreen;

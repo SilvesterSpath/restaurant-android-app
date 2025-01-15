@@ -7,7 +7,7 @@ export default () => {
 
   const searchApi = async (searchTerm) => {
     console.log('Hi there!');
-    try {
+    /*     try {
       const response = await yelp.get('/search', {
         params: {
           limit: 20,
@@ -26,7 +26,7 @@ export default () => {
 
       // Optional: Set results to an empty array
       setResults([]);
-    }
+    } */
   };
 
   // Call searchApi when component mounts

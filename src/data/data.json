@@ -25,7 +25,7 @@
   {
     "id": "yelp-business-2",
     "name": "Pizza Paradise",
-    "image_url": "https://example.com/pizzaparadise.jpg",
+    "image_url": "pizza3",
     "url": "https://example.com/pizzaparadise",
     "rating": 4.0,
     "review_count": 88,
@@ -48,7 +48,7 @@
   {
     "id": "yelp-business-3",
     "name": "Sushi Zen",
-    "image_url": "https://example.com/sushizen.jpg",
+    "image_url": "pasta4",
     "url": "https://example.com/sushizen",
     "rating": 4.8,
     "review_count": 210,
@@ -71,7 +71,7 @@
   {
     "id": "yelp-business-4",
     "name": "Burger Joint",
-    "image_url": "https://example.com/burgerjoint.jpg",
+    "image_url": "burger1",
     "url": "https://example.com/burgerjoint",
     "rating": 3.9,
     "review_count": 155,
@@ -94,7 +94,7 @@
   {
     "id": "yelp-business-5",
     "name": "Pasta Palace",
-    "image_url": "pasta2",
+    "image_url": "pasta5",
     "url": "https://example.com/pastapalace",
     "rating": 4.2,
     "review_count": 134,
@@ -117,7 +117,7 @@
   {
     "id": "yelp-business-6",
     "name": "Cheesy Crust Pizza",
-    "image_url": "pizza1",
+    "image_url": "pizza2",
     "url": "https://example.com/cheesycrustpizza",
     "rating": 4.3,
     "review_count": 98,
@@ -163,7 +163,7 @@
   {
     "id": "yelp-business-8",
     "name": "Pasta Haven",
-    "image_url": "pasta3",
+    "image_url": "pasta6",
     "url": "https://example.com/pastahaven",
     "rating": 4.6,
     "review_count": 220,
@@ -186,7 +186,7 @@
   {
     "id": "yelp-business-9",
     "name": "Ultimate Pizza",
-    "image_url": "pizza2",
+    "image_url": "pizza5",
     "url": "https://example.com/ultimatepizza",
     "rating": 4.7,
     "review_count": 200,

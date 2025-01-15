@@ -29,15 +29,17 @@ const SearchScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>SearchScreen</Text>
-      <SearchBar
-        term={term}
-        onTermChange={setTerm}
-        onTermSubmit={() => searchApi(term)}
-      />
+      <View style={styles.searchBarContainer}>
+        <SearchBar
+          style={styles.searchBar}
+          term={term}
+          onTermChange={setTerm}
+          onTermSubmit={() => searchApi(term)}
+        />
+      </View>
 
       {error && <Text>{error}</Text>}
-      <Text /* style={{ marginLeft: -180 }} */>
+      <Text style={{ marginLeft: 10 }}>
         {' '}
         We have found {data.length} results
       </Text>
@@ -58,8 +60,8 @@ const SearchScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    /* marginLeft: 15, */
+  searchBarContainer: {
+    /*     marginLeft: 10, */
   },
 });
 

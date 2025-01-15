@@ -4,7 +4,7 @@ import SearchBar from '../components/SearchBar';
 import ResultsCard from '../components/ResutsCard';
 import useResults from '../hooks/useResults';
 import ResultsList from '../components/ResultsList';
-import data from '../api/data.json';
+import data from '../data/data.json';
 
 /* import Constants from 'expo-constants';
 

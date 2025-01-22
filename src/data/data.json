@@ -228,5 +228,28 @@
     },
     "phone": "+12135551221",
     "distance": 2300.0
+  },
+  {
+    "id": "yelp-business-10",
+    "name": "Burger Mania",
+    "image_url": "burger3",
+    "url": "https://example.com/burgermania",
+    "rating": 3.8,
+    "review_count": 170,
+    "price": "$$$$",
+    "categories": [
+      { "alias": "burgers", "title": "Burgers" },
+      { "alias": "fastfood", "title": "Fast Food" }
+    ],
+    "coordinates": { "latitude": 34.051, "longitude": -118.248 },
+    "location": {
+      "address1": "707 Walnut Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip_code": "90010",
+      "country": "US"
+    },
+    "phone": "+12135551221",
+    "distance": 2300.0
   }
 ]

@@ -19,10 +19,7 @@ const SearchScreen = () => {
   };
 
   return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-    >
+    <>
       <View style={styles.searchBarContainer}>
         <SearchBar
           style={styles.searchBar}
@@ -31,10 +28,6 @@ const SearchScreen = () => {
           onTermSubmit={() => console.log('Search API Call')}
         />
       </View>
-
-      <Text style={styles.resultsText}>
-        We have found {data.length} results
-      </Text>
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <ResultsList
@@ -48,22 +41,16 @@ const SearchScreen = () => {
           title='Extravagant'
         />
       </ScrollView>
-    </KeyboardAvoidingView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, // Take up the full screen
-  },
   searchBarContainer: {
     paddingHorizontal: 10,
     paddingTop: 10,
   },
-  resultsText: {
-    marginLeft: 10,
-    marginBottom: 5,
-  },
+
   scrollContent: {
     paddingBottom: 20, // Ensure there's padding at the bottom for visibility
   },

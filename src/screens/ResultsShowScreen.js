@@ -2,7 +2,11 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 
 const ResultsShowScreen = () => {
-  return <div>ResultsShowScreen</div>;
+  return (
+    <View>
+      <Text>ResultsShowScreen</Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({});

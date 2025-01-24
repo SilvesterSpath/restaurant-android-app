@@ -230,12 +230,12 @@
     "distance": 2300.0
   },
   {
-    "id": "yelp-business-10",
-    "name": "Burger Mania",
+    "id": "yelp-business-11",
+    "name": "Burger Mania2",
     "image_url": "burger3",
     "url": "https://example.com/burgermania",
-    "rating": 3.8,
-    "review_count": 170,
+    "rating": 4.8,
+    "review_count": 1700,
     "price": "$$$$",
     "categories": [
       { "alias": "burgers", "title": "Burgers" },

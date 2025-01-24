@@ -11,7 +11,7 @@ import SearchBar from '../components/SearchBar';
 import ResultsList from '../components/ResultsList';
 import data from '../data/data.json';
 
-const SearchScreen = ({ navigation }) => {
+const SearchScreen = () => {
   const [term, setTerm] = useState('');
 
   const filterResultsByPrice = (price) => {
@@ -33,18 +33,12 @@ const SearchScreen = ({ navigation }) => {
         <ResultsList
           results={filterResultsByPrice('$')}
           title='CostEffective'
-          navigation={navigation}
         />
-        <ResultsList
-          results={filterResultsByPrice('$$')}
-          title='BitPricier'
-          navigation={navigation}
-        />
+        <ResultsList results={filterResultsByPrice('$$')} title='BitPricier' />
         <ResultsList results={filterResultsByPrice('$$$')} title='BigSpender' />
         <ResultsList
           results={filterResultsByPrice('$$$$')}
           title='Extravagant'
-          navigation={navigation}
         />
       </ScrollView>
     </>

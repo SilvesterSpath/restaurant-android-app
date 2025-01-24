@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import ResutsCard from './ResutsCard';
 import ResultsDetail from './ResultsDetail';
+import { withNavigation } from 'react-navigation';
 
 const ResultsList = ({ title, results, navigation }) => {
   return (
@@ -46,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ResultsList;
+export default withNavigation(ResultsList);
